@@ -8,16 +8,115 @@
 </head>
 <body>
     <style>
-        div{
-            background-color: gray;
-        }
-        h1{
+		h1{
             color: green;
             font-family: "Amatic SC" ;
         }
+		
+		.cabecalho {
+        font-family: "Amatic SC";
+        text-align: center;
+        font-size: 40px;
+		}
+		
+		.corpo {
+			font-family: "Amatic SC";
+			font-size: 20px;
+			text-align: left;
+			padding-left: 25%;
+			padding-right: 35%;
+		}
+		
+		.imagem-interior{
+			display: block;
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		.mapa{
+			display: block;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		.horario{
+			column-count: 2;
+			font-family: "Amatic SC";
+			padding-left: 25%;
+			padding-right: 35%;
+		}
+		
+		.form{
+			display: block;
+			font-family: "Amatic SC";
+			background-color: gainsboro;
+			margin-left: 25%;
+			margin-bottom: 10px;
+			padding-left: 5px;
+			border: none;
+			border-color: transparent;
+		}
+		
+		button{
+			display: block;
+			font-family: "Amatic SC";
+			background-color: lightgray;
+			margin-left: 25%;
+			margin-bottom: 10px;
+			width: 325px;
+			border: none;
+			border-color: transparent;
+		}
+		
     </style>
-    <div>
-        <h1>Home</h1>
-    </div>
+	
+    <h1>Home</h1>
+	
+	
+	<div id="frame 1">
+		<h1 class="cabecalho">About</h1>
+		<p class="corpo">The pizza restaurant was founded in lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.</p>
+
+    	<p class="corpo">The chef? Mr. Italiano himself</p>
+
+    	<p class="corpo">We are proud of our interiors</p>
+    	
+				
+		<img class="imagem-interior" src="https://lh3.googleusercontent.com/GDma25EtGBtxXKz2_14Y002NQSrtbdK4mAJDPbvZGQrfr_vlKadaiwXsfe-JJ2nvdld0ubw95bnPlm6V9XMn=w1880-h939-rw">
+			<p class="corpo">Opening hours</p>
+			<ul class="horario" style="list-style-type:none;">
+				<li>Mon & Tue closed</li>
+				<li>Wednesday 10.00 - 24.00</li>
+				<li>Thursday 10.00 - 24.00</li>
+				<li>Friday 10.00 - 12.00</li>
+				<li>Saturday 10.00 - 23.00</li>
+				<li>Sunday closed</li>
+			</ul>
+	</div>
+		
+		<br>
+		<br>
+		
+	<div id="frame 2">
+		<img class="mapa" src="https://lh5.googleusercontent.com/16H91rXXuI3Fs9GMxvwXon_2UZweeiWvYONg68PIfhE5-7yy7zAvEuN3P0DDkNhj8MmzYtjooy-nAFlLs7sg=w1880-h939-rw" alt="Localizacao do restaurante">
+	</div>
+			
+	<div id="section 1.4">
+		<h1 class="cabecalho">Contact</h2>
+		<p class="corpo">Find us at some address at some place.</p>
+		<p class="corpo">FYI! We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
+		<p class="corpo">Reserve a table, ask for today's special or just send us a message:</p>
+		
+		<form action="#">
+			<input class="form" type="text" size="100" placeholder="Name">
+			<input class="form" type="text" size="100" placeholder="How many people">
+			<input class="form" type="text" size="100" placeholder="16/11/2017 20:00">
+			<input class="form" type="text" size="100" placeholder="Message \ Special requirements">
+			<button type="send-message">send message</button>
+		</form>
+	</div>
+
     </body>
 </html>
