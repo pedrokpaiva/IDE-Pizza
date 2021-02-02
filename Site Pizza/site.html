@@ -8,10 +8,46 @@
 </head>
 <body>
     <style>
-		h1{
-            font-family: "Amatic SC" ;
-        }
+		.link-header{
+			height: 50px;
+		}
 		
+		.topo{
+			column-count: 4;
+			padding-top: 15px;
+			text-align: center;
+			font-size: larger;
+		}
+
+		.black-link{
+			color: black;
+			text-decoration: none;
+		}
+
+		.image-header{
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		.menu-name{
+			font-family: "Amatic SC";
+			font-weight: lighter;
+			text-transform: uppercase;
+			text-align: left;
+			padding-left: 28%;
+			padding-right: 35%;
+		}
+
+		.menu-description{
+			font-family: "Amatic SC"; 
+			text-transform: uppercase;
+			font-size: larger;
+			text-align: left;
+			padding-left: 28%;
+			padding-right: 35%;
+			margin-bottom: 3%;
+		}
+
 		.cabecalho {
         font-family: "Amatic SC";
         text-align: center;
@@ -70,12 +106,48 @@
 		}
 		
     </style>
+	<div class="link-header">
+		<ul class= "topo" style="list-style-type:none;">
+			<li><a class="black-link" href="#Home">Home</a></li>
+			<li><a class="black-link" href="#About">About</a></li>
+			<li><a class="black-link" href="#Menu">Menu</a></li>
+			<li><a class="black-link" href="#Contact">Contact</a></li>
+		</ul>
+	</div>
+	<img class="image-header" src="header.jpg" alt="Header image">
 	
-    <h1>Home</h1>
-	
-	
+	<div class="section 1.2">
+		<h1 id="Menu" class="cabecalho">
+			THE MENU
+		</h1>
+		<h2 class="menu-name">
+			Margherita
+		</h2>
+		<p class="menu-description">Fresh Tomatoes, Fresh Mozzarella, Fresh Basil - $12.50</p>
+		<h2 class="menu-name">
+			Formaggio
+		</h2>
+		<p class="menu-description">Four Cheeses (Mozzarella, Parmesan, Pecorino, Jarslberb) - $15.50</p>
+		<h2 class="menu-name">
+			Chicken
+		</h2>
+		<p class="menu-description">Fresh Tomatoes, Mozzarella, Chicken, Onions - $17.00</p>
+		<h2 class="menu-name">
+			Pineapple o` Clock
+		</h2>
+		<p class="menu-description">Fresh Tomatoes, Mozzarella, Fresh Pineapple, Bacon, Fresh Basil - $16.50</p>
+		<h2 class="menu-name">
+			Meat Town
+		</h2>
+		<p class="menu-description">Fresh Tomatoes, Mozzarella, Hot Pepperoni, Hot Sausage, Beef, Chicken - $19.50</p>
+		<h2 class="menu-name">
+			Parma
+		</h2>
+		<p class="menu-description">Fresh Tomatoes, Mozzarella, Parma, Bacon, Fresh Arugula - $17.00</p>
+
+	</div>
 	<div id="frame 1">
-		<h1 class="cabecalho">About</h1>
+		<h1 id="About" class="cabecalho">About</h1>
 		<p class="corpo">The pizza restaurant was founded in lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.</p>
 
     	<p class="corpo">The chef? Mr. Italiano himself</p>
@@ -103,7 +175,7 @@
 	</div>
 			
 	<div id="section 1.4">
-		<h1 class="cabecalho">Contact</h2>
+		<h1 id="Contact"class="cabecalho">Contact</h2>
 		<p class="corpo">Find us at some address at some place.</p>
 		<p class="corpo">FYI! We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
 		<p class="corpo">Reserve a table, ask for today's special or just send us a message:</p>
