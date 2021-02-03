@@ -41,7 +41,7 @@
 		.menu-description{
 			font-family: "Amatic SC"; 
 			text-transform: uppercase;
-			font-size: larger;
+			font-size: x-large;
 			text-align: left;
 			padding-left: 28%;
 			padding-right: 35%;
@@ -49,17 +49,18 @@
 		}
 
 		.cabecalho {
-        font-family: "Amatic SC";
-        text-align: center;
-        font-size: 40px;
+			font-family: "Amatic SC";
+			text-align: center;
+			font-size: 40px;
+			font-weight: lighter;
 		}
 		
 		.corpo {
 			font-family: "Amatic SC";
-			font-size: 20px;
+			font-size: x-large;
 			text-align: left;
 			padding-left: 25%;
-			padding-right: 35%;
+			padding-right: 25%;
 		}
 		
 		.imagem-interior{
@@ -79,30 +80,24 @@
 		.horario{
 			column-count: 2;
 			font-family: "Amatic SC";
+			font-size: x-large;
 			padding-left: 25%;
-			padding-right: 35%;
+			padding-right: 25%;
 		}
 		
-		.form{
-			display: block;
+		.form input{
+			width:50%;
+			height:40px;
 			font-family: "Amatic SC";
-			background-color: gainsboro;
+			background-color: whitesmoke;
 			margin-left: 25%;
 			margin-bottom: 10px;
-			padding-left: 5px;
+			padding-left: 20px;
 			border: none;
-			border-color: transparent;
 		}
 		
-		button{
-			display: block;
-			font-family: "Amatic SC";
-			background-color: lightgray;
-			margin-left: 25%;
-			margin-bottom: 10px;
-			width: 325px;
-			border: none;
-			border-color: transparent;
+		.form input[type=submit]{
+			background-color: #E0E0E0;
 		}
 		
     </style>
@@ -180,12 +175,12 @@
 		<p class="corpo">FYI! We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
 		<p class="corpo">Reserve a table, ask for today's special or just send us a message:</p>
 		
-		<form action="#">
-			<input class="form" type="text" size="100" placeholder="Name">
-			<input class="form" type="text" size="100" placeholder="How many people">
-			<input class="form" type="text" size="100" placeholder="16/11/2017 20:00">
-			<input class="form" type="text" size="100" placeholder="Message \ Special requirements">
-			<button type="send-message">send message</button>
+		<form class="form">
+			<input type="text" placeholder="Name">
+			<input type="text" placeholder="How many people">
+			<input type="text" placeholder="16/11/2017 20:00">
+			<input type="text" placeholder="Message \ Special requirements">
+			<input type="submit" value="SEND MESSAGE">
 		</form>
 	</div>
 
