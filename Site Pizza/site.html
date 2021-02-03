@@ -14,14 +14,14 @@
 		
 		.topo{
 			column-count: 4;
-			padding-top: 15px;
 			text-align: center;
-			font-size: larger;
+			font-size: xx-large;
 		}
 
 		.black-link{
 			color: black;
 			text-decoration: none;
+			font-family: "Amatic SC";
 		}
 
 		.image-header{
@@ -85,20 +85,39 @@
 			padding-right: 25%;
 		}
 		
+		#section{
+			width: 700px;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+		
+		.contact{
+			font-family: "Amatic SC";
+			font-size: x-large;
+			text-align: left;
+		}
+		
+		.form{
+			box-sizing: border-box;
+			width: 100%;
+		}
+		
 		.form input{
-			width:50%;
 			height:40px;
 			font-family: "Amatic SC";
 			background-color: whitesmoke;
-			margin-left: 25%;
+			margin:0 auto;
 			margin-bottom: 10px;
 			padding-left: 20px;
 			border: none;
+			box-sizing: border-box;
+			width:100%
 		}
 		
 		.form input[type=submit]{
 			background-color: #E0E0E0;
 		}
+		
 		
     </style>
 	<div class="link-header">
@@ -169,11 +188,11 @@
 		<img class="mapa" src="map.jpg" alt="Localizacao do restaurante">
 	</div>
 			
-	<div id="section 1.4">
-		<h1 id="Contact"class="cabecalho">Contact</h2>
-		<p class="corpo">Find us at some address at some place.</p>
-		<p class="corpo">FYI! We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
-		<p class="corpo">Reserve a table, ask for today's special or just send us a message:</p>
+	<div id="section">
+		<h1 id="Contact" class="cabecalho">Contact</h2>
+		<p class="contact">Find us at some address at some place.</p>
+		<p class="contact">FYI! We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
+		<p class="contact">Reserve a table, ask for today's special or just send us a message:</p>
 		
 		<form class="form">
 			<input type="text" placeholder="Name">
