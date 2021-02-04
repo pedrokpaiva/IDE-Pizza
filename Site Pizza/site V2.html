@@ -10,7 +10,9 @@
     <style>
 		.link-header{
 			position: fixed;
+			z-index: 1;
 			top: 0px;
+			right: 0px;
 			background-color: black;
 			opacity: 70%;
 			width: 100%;
@@ -23,8 +25,10 @@
 			font-size: xx-large;
 		}
 
+
 		.black-link{
 			color: white;
+			font-family: "Amatic SC";
 			text-decoration: none;
 			word-spacing: 100%;
 		}
@@ -35,6 +39,49 @@
 			max-height: 100%;
 		}
 
+		.container {
+			position: relative;
+			z-index: -1;
+			text-align: center;
+			color: white;
+		}
+
+		.center {
+			font-family: "Amatic SC";
+			font-size: 400%;
+			position: absolute;
+			top: 41%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.bot-left {
+			font-family: "Amatic SC";
+			font-size: 100%;
+			background-color: black;
+			position: absolute;
+			border-width: 2px;
+			border-style: solid;
+			border-color: black;
+			bottom: 1px;
+			left: 60px;
+			transform: translate(-50%, -50%);
+		}
+
+		.go-menu{
+			font-family: "Amatic SC";
+			text-decoration: none;
+			background-color: black;
+			font-size: 200%;
+			position: absolute;
+			border-width: 5px;
+			border-style: solid;
+			border-color: black;
+			top: 80%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
 		.menu-name{
 			font-family: "Amatic SC";
 			font-weight: lighter;
@@ -42,6 +89,17 @@
 			text-align: left;
 			padding-left: 28%;
 			padding-right: 35%;
+		}
+
+		.price{
+			font-family: "Amatic SC";
+			float: right;
+			color: white;
+			background-color:rgb(80, 80, 80);
+			border-width: 5px;
+			border-radius: 10%;
+			border-style: solid;
+			border-color: rgb(80, 80, 80);
 		}
 
 		.menu-description{
@@ -125,23 +183,31 @@
 		}
 		
 		
-    </style>
+	</style>
+	
 	<div class="link-header">
 		<p>
-			<a class="black-link" href="#Home">Home</a> <a class="black-link" href="#About">About </a>
-			<a class="black-link" href="#Menu">Menu </a> <a class="black-link" href="#Contact">Contact</a>
+			_<a class="black-link" href="#Home">Home</a>_<a class="black-link" href="#About">About</a>_
+			<a class="black-link" href="#Menu">Menu</a>_<a class="black-link" href="#Contact">Contact</a>
 		</p>
 	</div>
-	<img class="image-header" src="header.jpg" alt="Header image">
-	
+
+	<div class="container">
+		<img id="Home" class="image-header" src="header.jpg" alt="Header image">
+		<div class="center">THIN CRUST PIZZA</div>
+		<div class="bot-left">Open from 10AM top 12PM</div>
+		<a class="black-link go-menu" href="#Menu">Let me see the menu</a>
+	</div>
+
 	<div class="section 1.2">
 		<h1 id="Menu" class="cabecalho">
 			THE MENU
 		</h1>
+		<h3 class="price">$12.50</h3>
 		<h2 class="menu-name">
 			Margherita
 		</h2>
-		<p class="menu-description">Fresh Tomatoes, Fresh Mozzarella, Fresh Basil - $12.50</p>
+		<p class="menu-description">Fresh Tomatoes, Fresh Mozzarella, Fresh Basil</p>
 		<h2 class="menu-name">
 			Formaggio
 		</h2>
