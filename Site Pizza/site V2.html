@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Restaurant</title>
 </head>
-<body>
+<body style="margin: 0px">
     <style>
 		.link-header{
 			position: fixed;
@@ -37,6 +37,7 @@
 		.image-header{
 			max-width: 100%;
 			max-height: 100%;
+			margin-bottom: 0px;
 		}
 
 		.container {
@@ -84,11 +85,9 @@
 
 		.menu-name{
 			font-family: "Amatic SC";
-			font-weight: lighter;
+			color: black;
 			text-transform: uppercase;
 			text-align: left;
-			padding-left: 28%;
-			padding-right: 35%;
 		}
 
 		.price{
@@ -104,12 +103,28 @@
 
 		.menu-description{
 			font-family: "Amatic SC"; 
+			color: black;
 			text-transform: uppercase;
 			font-size: x-large;
 			text-align: left;
-			padding-left: 28%;
-			padding-right: 35%;
 			margin-bottom: 3%;
+		}
+
+		.section-menu{
+			background-color: black;
+		}
+
+		#container-menu{
+			background-color: white;
+			z-index: 0;
+			margin-left: 20%;
+			margin-right: 20%;
+		}
+
+		.menu-item{
+			padding-right: 1%;
+			border-width: 10px;
+			border-color: black;
 		}
 
 		.cabecalho {
@@ -180,9 +195,7 @@
 		
 		.form input[type=submit]{
 			background-color: #E0E0E0;
-		}
-		
-		
+		}	
 	</style>
 	
 	<div class="link-header">
@@ -192,43 +205,58 @@
 		</p>
 	</div>
 
-	<div class="container">
+	<div class="container" style="margin: 0px;">
 		<img id="Home" class="image-header" src="header.jpg" alt="Header image">
 		<div class="center">THIN CRUST PIZZA</div>
 		<div class="bot-left">Open from 10AM top 12PM</div>
 		<a class="black-link go-menu" href="#Menu">Let me see the menu</a>
 	</div>
 
-	<div class="section 1.2">
-		<h1 id="Menu" class="cabecalho">
-			THE MENU
-		</h1>
-		<h3 class="price">$12.50</h3>
-		<h2 class="menu-name">
-			Margherita
-		</h2>
-		<p class="menu-description">Fresh Tomatoes, Fresh Mozzarella, Fresh Basil</p>
-		<h2 class="menu-name">
-			Formaggio
-		</h2>
-		<p class="menu-description">Four Cheeses (Mozzarella, Parmesan, Pecorino, Jarslberb) - $15.50</p>
-		<h2 class="menu-name">
-			Chicken
-		</h2>
-		<p class="menu-description">Fresh Tomatoes, Mozzarella, Chicken, Onions - $17.00</p>
-		<h2 class="menu-name">
-			Pineapple o` Clock
-		</h2>
-		<p class="menu-description">Fresh Tomatoes, Mozzarella, Fresh Pineapple, Bacon, Fresh Basil - $16.50</p>
-		<h2 class="menu-name">
-			Meat Town
-		</h2>
-		<p class="menu-description">Fresh Tomatoes, Mozzarella, Hot Pepperoni, Hot Sausage, Beef, Chicken - $19.50</p>
-		<h2 class="menu-name">
-			Parma
-		</h2>
-		<p class="menu-description">Fresh Tomatoes, Mozzarella, Parma, Bacon, Fresh Arugula - $17.00</p>
-
+	<div class="section-menu">
+		<h1 id="Menu" class="cabecalho" style="color: white;">THE MENU</h1>
+		<section id="container-menu" class="container">
+			<div class="menu-item">
+				<h3 class="price">$12.50</h3>
+				<h2 class="menu-name">
+					Margherita
+				</h2>
+				<p class="menu-description">Fresh Tomatoes, Fresh Mozzarella, Fresh Basil</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$15.50</h3>
+				<h2 class="menu-name">
+					Formaggio
+				</h2>
+				<p class="menu-description">Four Cheeses (Mozzarella, Parmesan, Pecorino, Jarslberb)</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$17.00</h3>
+				<h2 class="menu-name">
+					Chicken
+				</h2>
+				<p class="menu-description">Fresh Tomatoes, Mozzarella, Chicken, Onions</p>
+			<div class="menu-item">
+				<h3 class="price">$16.50</h3>
+				<h2 class="menu-name">
+					Pineapple o` Clock
+				</h2>
+				<p class="menu-description">Fresh Tomatoes, Mozzarella, Fresh Pineapple, Bacon, Fresh Basil</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$19.50</h3>
+				<h2 class="menu-name">
+					Meat Town
+				</h2>
+				<p class="menu-description">Fresh Tomatoes, Mozzarella, Hot Pepperoni, Hot Sausage, Beef, Chicken</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$17.00</h3>
+				<h2 class="menu-name">
+					Parma
+				</h2>
+				<p class="menu-description">Fresh Tomatoes, Mozzarella, Parma, Bacon, Fresh Arugula - $17.00</p>
+			</div>
+		</section>
 	</div>
 	<div id="frame 1">
 		<h1 id="About" class="cabecalho">About</h1>
