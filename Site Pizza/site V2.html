@@ -8,6 +8,11 @@
 </head>
 <body style="margin: 0px">
     <style>
+		body{
+			background-color: black;
+			font-family: "Amatic SC";
+		}
+		
 		.link-header{
 			position: fixed;
 			z-index: 1;
@@ -28,7 +33,6 @@
 
 		.black-link{
 			color: white;
-			font-family: "Amatic SC";
 			text-decoration: none;
 			word-spacing: 100%;
 		}
@@ -48,7 +52,6 @@
 		}
 
 		.center {
-			font-family: "Amatic SC";
 			font-size: 400%;
 			position: absolute;
 			top: 41%;
@@ -56,8 +59,7 @@
 			transform: translate(-50%, -50%);
 		}
 
-		.bot-left {
-			font-family: "Amatic SC";
+		.bot-left {		
 			font-size: 100%;
 			background-color: black;
 			position: absolute;
@@ -70,7 +72,6 @@
 		}
 
 		.go-menu{
-			font-family: "Amatic SC";
 			text-decoration: none;
 			background-color: black;
 			font-size: 200%;
@@ -84,14 +85,12 @@
 		}
 
 		.menu-name{
-			font-family: "Amatic SC";
 			color: black;
 			text-transform: uppercase;
 			text-align: left;
 		}
 
 		.price{
-			font-family: "Amatic SC";
 			float: right;
 			color: white;
 			background-color:rgb(80, 80, 80);
@@ -102,7 +101,6 @@
 		}
 
 		.menu-description{
-			font-family: "Amatic SC"; 
 			color: black;
 			text-transform: uppercase;
 			font-size: x-large;
@@ -116,9 +114,14 @@
 
 		#container-menu{
 			background-color: white;
-			z-index: 0;
-			margin-left: 20%;
-			margin-right: 20%;
+			z-index: 0;		
+			/*			
+			margin-left: 20%;			
+			margin-right: 20%; 
+			*/			
+			margin: 0 auto;
+			width: 900px;
+			max-width: 70%
 		}
 
 		.menu-item{
@@ -128,25 +131,16 @@
 		}
 
 		.cabecalho {
-			font-family: "Amatic SC";
+			color: white;
 			text-align: center;
 			font-size: 40px;
 			font-weight: lighter;
 		}
 		
 		.corpo {
-			font-family: "Amatic SC";
+			color: white;
 			font-size: x-large;
 			text-align: left;
-			padding-left: 25%;
-			padding-right: 25%;
-		}
-		
-		.imagem-interior{
-			display: block;
-			width: 50%;
-			margin-left: auto;
-			margin-right: auto;
 		}
 		
 		.mapa{
@@ -156,22 +150,39 @@
 			margin-right: auto;
 		}
 		
-		.horario{
-			column-count: 2;
-			font-family: "Amatic SC";
-			font-size: x-large;
-			padding-left: 25%;
-			padding-right: 25%;
+		#frame-about{
+			margin: 0 auto;
+			width: 900px;
+			max-width: 100%;			
 		}
 		
-		#section{
-			width: 700px;
+		.horario{
+			line-height: 2.0;		
+			color: white;
+			font-size: x-large;
+			padding-left: 0;						
+			column-count: 2;
+			list-style-type:none;
+		}
+		
+		#section{		
+			background-color: #6c7a81;
+		}	
+		
+		.chef-img{
+			border-radius: 50%;
+			width: 125px;
+			float: right;
+		}
+		
+		#contact-form{
+			color: white;
+			width: 900px;
 			max-width: 100%;
 			margin: 0 auto;
 		}
 		
 		.contact{
-			font-family: "Amatic SC";
 			font-size: x-large;
 			text-align: left;
 		}
@@ -182,8 +193,8 @@
 		}
 		
 		.form input{
-			height:40px;
 			font-family: "Amatic SC";
+			height:40px;
 			background-color: whitesmoke;
 			margin:0 auto;
 			margin-bottom: 10px;
@@ -196,6 +207,7 @@
 		.form input[type=submit]{
 			background-color: #E0E0E0;
 		}	
+		
 	</style>
 	
 	<div class="link-header">
@@ -257,49 +269,65 @@
 				<p class="menu-description">Fresh Tomatoes, Mozzarella, Parma, Bacon, Fresh Arugula - $17.00</p>
 			</div>
 		</section>
+		<br>
 	</div>
-	<div id="frame 1">
-		<h1 id="About" class="cabecalho">About</h1>
-		<p class="corpo">The pizza restaurant was founded in lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.</p>
-
-    	<p class="corpo">The chef? Mr. Italiano himself</p>
-
-    	<p class="corpo">We are proud of our interiors</p>
-    	
+	<div style="background-color: #8b5f5b;">
+		<div id="frame-about">
+			<br>
+			<br>
+			<h1 id="About" class="cabecalho">About</h1>
+			<p class="corpo">The pizza restaurant was founded in lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.</p>
+			
+			<img class="chef-img" src="chef.jpg" alt="Mr. Italiano">
+			
+			<p class="corpo">The chef? Mr. Italiano himself</p>
+			
+			<p class="corpo">We are proud of our interiors</p>
+			
+					
+			<img style="max-width:100%;" src="onepage_restaurant.jpg" alt="interior">
+				<p class="corpo" style="font-weight: bold;font-size: xx-large;">Opening Hours</p>
+				<ul class="horario">
+					<li>Mon & Tue closed</li>
+					<li>Wednesday 10.00 - 24.00</li>
+					<li>Thursday 10.00 - 24.00</li>
+					<li>Friday 10.00 - 12.00</li>
+					<li>Saturday 10.00 - 23.00</li>
+					<li>Sunday closed</li>
+				</ul>
 				
-		<img class="imagem-interior" src="onepage_restaurant.jpg" alt="interior">
-			<p class="corpo">Opening hours</p>
-			<ul class="horario" style="list-style-type:none;">
-				<li>Mon & Tue closed</li>
-				<li>Wednesday 10.00 - 24.00</li>
-				<li>Thursday 10.00 - 24.00</li>
-				<li>Friday 10.00 - 12.00</li>
-				<li>Saturday 10.00 - 23.00</li>
-				<li>Sunday closed</li>
-			</ul>
+			<br>
+			<br>
+			
+		</div>
 	</div>
-		
-		<br>
-		<br>
-		
 	<div id="frame 2">
 		<img class="mapa" src="map.jpg" alt="Localizacao do restaurante">
 	</div>
-			
+	
+	
 	<div id="section">
-		<h1 id="Contact" class="cabecalho">Contact</h2>
-		<p class="contact">Find us at some address at some place.</p>
-		<p class="contact">FYI! We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
-		<p class="contact">Reserve a table, ask for today's special or just send us a message:</p>
-		
-		<form class="form">
-			<input type="text" placeholder="Name">
-			<input type="text" placeholder="How many people">
-			<input type="text" placeholder="16/11/2017 20:00">
-			<input type="text" placeholder="Message \ Special requirements">
-			<input type="submit" value="SEND MESSAGE">
-		</form>
+		<br>
+		<br>
+		<div id="contact-form">
+			<h1 class="cabecalho">Contact</h2>
+			<p class="contact">Find us at some address at some place or call us at 05050515-122330</p>
+			<p class="contact"> <span style="background-color: black; padding: 5px 5px 5px 5px;">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
+			<p class="contact" style="font-size: xx-large;"><span style="font-weight: bold;">Reserve</span> a table, ask for today's special or just send us a message:</p>
+			
+			<form class="form">
+				<input type="text" placeholder="Name">
+				<input type="text" placeholder="How many people">
+				<input type="text" placeholder="16/11/2017 20:00">
+				<input type="text" placeholder="Message \ Special requirements">
+				<input type="submit" value="SEND MESSAGE">
+			</form>
+		</div>
 	</div>
-
+	<br>
+	<br>
+	<br>
+	<br>
+	
     </body>
 </html>
