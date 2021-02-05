@@ -21,7 +21,8 @@
 			background-color: black;
 			opacity: 70%;
 			width: 100%;
-			height: 50px;
+			height: 48px;
+
 		}
 		
 		.topo{
@@ -72,7 +73,6 @@
 		}
 
 		.go-menu{
-			text-decoration: none;
 			background-color: black;
 			font-size: 200%;
 			position: absolute;
@@ -82,6 +82,28 @@
 			top: 80%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+		}
+
+		.container-flex{
+			display: flex;
+			max-width: 900px;
+			width: 80%;
+			margin: 0 auto;
+			justify-content: space-around;
+
+		}
+
+		.tipo-menu{
+			flex: 1;
+			text-align: center;
+			color: white;
+			font-size: xx-large;
+			border: thin white solid;
+			border-bottom: transparent;
+		}
+
+		.tipo-menu:hover{
+			background-color: red;
 		}
 
 		.menu-name{
@@ -114,21 +136,18 @@
 
 		#container-menu{
 			background-color: white;
-			z-index: 0;		
-			/*			
-			margin-left: 20%;			
-			margin-right: 20%; 
-			*/			
+			z-index: 0;					
 			margin: 0 auto;
 			width: 900px;
-			max-width: 70%
+			max-width: 80%
 		}
 
 		.menu-item{
 			padding-right: 1%;
 			border-width: 10px;
-			border-color: black;
+			border: solid grey 1px;
 		}
+
 
 		.cabecalho {
 			color: white;
@@ -153,7 +172,7 @@
 		#frame-about{
 			margin: 0 auto;
 			width: 900px;
-			max-width: 100%;			
+			max-width: 80%;			
 		}
 		
 		.horario{
@@ -178,7 +197,7 @@
 		#contact-form{
 			color: white;
 			width: 900px;
-			max-width: 100%;
+			max-width: 80%;
 			margin: 0 auto;
 		}
 		
@@ -217,7 +236,7 @@
 		</p>
 	</div>
 
-	<div class="container" style="margin: 0px;">
+	<div class="container">
 		<img id="Home" class="image-header" src="header.jpg" alt="Header image">
 		<div class="center">THIN CRUST PIZZA</div>
 		<div class="bot-left">Open from 10AM top 12PM</div>
@@ -226,6 +245,11 @@
 
 	<div class="section-menu">
 		<h1 id="Menu" class="cabecalho" style="color: white;">THE MENU</h1>
+		<section class="container-flex">
+			<div class="tipo-menu">Pizzas</div>
+			<div class="tipo-menu">Salads</div>
+			<div class="tipo-menu">Starters</div>
+		</section>
 		<section id="container-menu" class="container">
 			<div class="menu-item">
 				<h3 class="price">$12.50</h3>
@@ -247,6 +271,7 @@
 					Chicken
 				</h2>
 				<p class="menu-description">Fresh Tomatoes, Mozzarella, Chicken, Onions</p>
+			</div>
 			<div class="menu-item">
 				<h3 class="price">$16.50</h3>
 				<h2 class="menu-name">
@@ -257,14 +282,14 @@
 			<div class="menu-item">
 				<h3 class="price">$19.50</h3>
 				<h2 class="menu-name">
-					Meat Town
+					Meat Town <span style="background-color: red; padding: 5px 5px 5px 5px; color: white; font-weight: lighter; border-radius: 10%;">HOT!</span>
 				</h2>
 				<p class="menu-description">Fresh Tomatoes, Mozzarella, Hot Pepperoni, Hot Sausage, Beef, Chicken</p>
 			</div>
 			<div class="menu-item">
 				<h3 class="price">$17.00</h3>
 				<h2 class="menu-name">
-					Parma
+					Parma <span style="background-color: lightgray; padding: 5px 5px 5px 5px; font-weight: lighter; border-radius: 10%;">NEW</span>
 				</h2>
 				<p class="menu-description">Fresh Tomatoes, Mozzarella, Parma, Bacon, Fresh Arugula - $17.00</p>
 			</div>
@@ -310,7 +335,7 @@
 		<br>
 		<br>
 		<div id="contact-form">
-			<h1 class="cabecalho">Contact</h2>
+			<h1 id="Contact" class="cabecalho">Contact</h2>
 			<p class="contact">Find us at some address at some place or call us at 05050515-122330</p>
 			<p class="contact"> <span style="background-color: black; padding: 5px 5px 5px 5px;">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
 			<p class="contact" style="font-size: xx-large;"><span style="font-weight: bold;">Reserve</span> a table, ask for today's special or just send us a message:</p>
