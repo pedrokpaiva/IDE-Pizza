@@ -102,9 +102,6 @@
 			border-bottom: transparent;
 		}
 
-		.tipo-menu:hover{
-			background-color: red;
-		}
 
 		.menu-name{
 			color: black;
@@ -134,10 +131,37 @@
 			background-color: black;
 		}
 
-		#container-menu{
+		#container-menu-pizza{
 			background-color: white;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 1;					
+			left: 0;
+			right: 0;
+			width: 900px;
+			max-width: 80%
+		}
+
+		#container-menu-salad{
+			background-color: white;
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
 			z-index: 0;					
-			margin: 0 auto;
+			left: 0;
+			right: 0;
+			width: 900px;
+			max-width: 80%
+		}
+
+		#container-menu-starter{
+			background-color: white;
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 0;					
+			left: 0;
+			right: 0;
 			width: 900px;
 			max-width: 80%
 		}
@@ -247,11 +271,74 @@
 	<div class="section-menu">
 		<h1 id="Menu" class="cabecalho" style="color: white;">THE MENU</h1>
 		<section class="container-flex">
-			<div class="tipo-menu">Pizzas</div>
-			<div class="tipo-menu">Salads</div>
-			<div class="tipo-menu">Starters</div>
+			<div id="pizza-header" class="tipo-menu" style="background-color: red;">Pizzas</div>
+			<div id="salad-header" class="tipo-menu">Pasta</div>
+			<div id="starter-header" class="tipo-menu">Starters</div>
 		</section>
-		<section id="container-menu" class="container">
+
+		<section id="container-menu-salad" class="container">
+			<div class="menu-item">
+				<h3 class="price">$13.50</h3>
+				<h2 class="menu-name">
+					Lasagna <span style="background-color: red; color: white; padding: 5px 5px 5px 5px; font-weight: lighter; border-radius: 10%;">Popular</span>
+				</h2>
+				<p class="menu-description">Special Sauce, Mozzarella, Parmesan, Ground Beef</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$14.50</h3>
+				<h2 class="menu-name">
+					Ravioli
+				</h2>
+				<p class="menu-description">Raviolli filled with Cheese</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$11.00</h3>
+				<h2 class="menu-name">
+					Spaghetti Classica
+				</h2>
+				<p class="menu-description">Fresh Tomatoes, Onions, Ground Beef</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$25.50</h3>
+				<h2 class="menu-name">
+					Seafood Pasta
+				</h2>
+				<p class="menu-description">Salmon, Shrimp, Lobster, Garlic</p>
+			</div>
+		</section>
+
+		<section id="container-menu-starter" class="container">
+			<div class="menu-item">
+				<h3 class="price">$5.50</h3>
+				<h2 class="menu-name">
+					Today's Soup <span style="background-color: lightgray; padding: 5px 5px 5px 5px; font-weight: lighter; border-radius: 10%;">Seasonal</span>
+				</h2>
+				<p class="menu-description">Ask the Waiter</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$8.50</h3>
+				<h2 class="menu-name">
+					Bruschetta
+				</h2>
+				<p class="menu-description">Bread with Pesto, Tomatoes, Onion, Garlic</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$9.50</h3>
+				<h2 class="menu-name">
+					Garlic Bread
+				</h2>
+				<p class="menu-description">Grilled Ciabatta, Garlic Butter, Onions</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$10.50</h3>
+				<h2 class="menu-name">
+					Tomozzarella
+				</h2>
+				<p class="menu-description">Tomatoe and Mozzarella</p>
+			</div>
+		</section>
+
+		<section id="container-menu-pizza" class="container";>
 			<div class="menu-item">
 				<h3 class="price">$12.50</h3>
 				<h2 class="menu-name">
@@ -295,6 +382,7 @@
 				<p class="menu-description">Fresh Tomatoes, Mozzarella, Parma, Bacon, Fresh Arugula - $17.00</p>
 			</div>
 		</section>
+
 		<br>
 	</div>
 	<div style="background-color: #8b5f5b;">
@@ -354,6 +442,46 @@
 	<br>
 	<br>
 	<br>
+
+	<script>
+
+		document.getElementById("pizza-header").onclick = changeMenuPizza; 
+		document.getElementById("salad-header").onclick = changeMenuSalad;
+		document.getElementById("starter-header").onclick = changeMenuStarter;  
 	
+		function changeMenuPizza() {
+			document.getElementById("pizza-header").style.backgroundColor = "red";
+			document.getElementById("salad-header").style.backgroundColor = "black";
+			document.getElementById("starter-header").style.backgroundColor = "black";
+			document.getElementById("container-menu-pizza").style.zIndex = "2";
+			document.getElementById("container-menu-salad").style.zIndex = "-1";
+			document.getElementById("container-menu-starter").style.zIndex = "-1";
+
+			return false;
+		}   
+
+		function changeMenuSalad() {
+			document.getElementById("salad-header").style.backgroundColor = "red";
+			document.getElementById("pizza-header").style.backgroundColor = "black";
+			document.getElementById("starter-header").style.backgroundColor = "black";
+			document.getElementById("container-menu-pizza").style.zIndex = "-1";
+			document.getElementById("container-menu-salad").style.zIndex = "2";
+			document.getElementById("container-menu-starter").style.zIndex = "-1";
+
+			return false;
+		}   
+
+		function changeMenuStarter() {
+			document.getElementById("pizza-header").style.backgroundColor = "black";
+			document.getElementById("starter-header").style.backgroundColor = "red";
+			document.getElementById("salad-header").style.backgroundColor = "black";
+			document.getElementById("container-menu-pizza").style.zIndex = "-1";
+			document.getElementById("container-menu-salad").style.zIndex = "-1";
+			document.getElementById("container-menu-starter").style.zIndex = "2";
+
+			return false;
+		}   
+	
+	</script>
     </body>
 </html>
