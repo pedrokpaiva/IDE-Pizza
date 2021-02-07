@@ -4,212 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Restaurant</title>
+	<link rel="stylesheet" href="style.css">
+    <title>Pizza Restaurant</title>	
 </head>
 <body style="margin: 0px">
-    <style>
-		body{
-			background-color: black;
-			font-family: "Amatic SC";
-		}
-		
-		.link-header{
-			position: fixed;
-			z-index: 1;
-			top: 0px;
-			right: 0px;
-			background-color: black;
-			opacity: 70%;
-			width: 100%;
-			height: 50px;
-		}
-		
-		.topo{
-			column-count: 4;
-			text-align: center;
-			font-size: xx-large;
-		}
-
-
-		.black-link{
-			color: white;
-			text-decoration: none;
-			word-spacing: 100%;
-		}
-
-
-		.image-header{
-			max-width: 100%;
-			max-height: 100%;
-			margin-bottom: 0px;
-		}
-
-		.container {
-			position: relative;
-			z-index: -1;
-			text-align: center;
-			color: white;
-		}
-
-		.center {
-			font-size: 400%;
-			position: absolute;
-			top: 41%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-
-		.bot-left {		
-			font-size: 100%;
-			background-color: black;
-			position: absolute;
-			border-width: 2px;
-			border-style: solid;
-			border-color: black;
-			bottom: 1px;
-			left: 60px;
-			transform: translate(-50%, -50%);
-		}
-
-		.go-menu{
-			text-decoration: none;
-			background-color: black;
-			font-size: 200%;
-			position: absolute;
-			border-width: 5px;
-			border-style: solid;
-			border-color: black;
-			top: 80%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-
-		.menu-name{
-			color: black;
-			text-transform: uppercase;
-			text-align: left;
-		}
-
-		.price{
-			float: right;
-			color: white;
-			background-color:rgb(80, 80, 80);
-			border-width: 5px;
-			border-radius: 10%;
-			border-style: solid;
-			border-color: rgb(80, 80, 80);
-		}
-
-		.menu-description{
-			color: black;
-			text-transform: uppercase;
-			font-size: x-large;
-			text-align: left;
-			margin-bottom: 3%;
-		}
-
-		.section-menu{
-			background-color: black;
-		}
-
-		#container-menu{
-			background-color: white;
-			z-index: 0;		
-			/*			
-			margin-left: 20%;			
-			margin-right: 20%; 
-			*/			
-			margin: 0 auto;
-			width: 900px;
-			max-width: 70%
-		}
-
-		.menu-item{
-			padding-right: 1%;
-			border-width: 10px;
-			border-color: black;
-		}
-
-		.cabecalho {
-			color: white;
-			text-align: center;
-			font-size: 40px;
-			font-weight: lighter;
-		}
-		
-		.corpo {
-			color: white;
-			font-size: x-large;
-			text-align: left;
-		}
-		
-		.mapa{
-			filter: grayscale(80%);
-			display: block;
-			width: 100%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		
-		#frame-about{
-			margin: 0 auto;
-			width: 900px;
-			max-width: 100%;			
-		}
-		
-		.horario{
-			line-height: 2.0;		
-			color: white;
-			font-size: x-large;
-			padding-left: 0;						
-			column-count: 2;
-			list-style-type:none;
-		}
-		
-		#section{		
-			background-color: #6c7a81;
-		}	
-		
-		.chef-img{
-			border-radius: 50%;
-			width: 125px;
-			float: right;
-		}
-		
-		#contact-form{
-			color: white;
-			width: 900px;
-			max-width: 100%;
-			margin: 0 auto;
-		}
-		
-		.contact{
-			font-size: x-large;
-			text-align: left;
-		}
-		
-		.form{
-			box-sizing: border-box;
-			width: 100%;
-		}
-		
-		.form input{
-			font-family: "Amatic SC";
-			height:40px;
-			background-color: whitesmoke;
-			margin:0 auto;
-			margin-bottom: 10px;
-			padding-left: 20px;
-			border: none;
-			box-sizing: border-box;
-			width:100%
-		}
-		
-		.form input[type=submit]{
-			background-color: #E0E0E0;
-		}	
-		
-	</style>
+    
 	
 	<div class="link-header">
 		<p>
@@ -218,8 +17,8 @@
 		</p>
 	</div>
 
-	<div class="container" style="margin: 0px;">
-		<img id="Home" class="image-header" src="header.jpg" alt="Header image">
+	<div class="container" style="z-index: 1;">
+		<img id="Home" class="image-header" src="imagens/header.jpg" alt="Header image">
 		<div class="center">THIN CRUST PIZZA</div>
 		<div class="bot-left">Open from 10AM top 12PM</div>
 		<a class="black-link go-menu" href="#Menu">Let me see the menu</a>
@@ -227,7 +26,75 @@
 
 	<div class="section-menu">
 		<h1 id="Menu" class="cabecalho" style="color: white;">THE MENU</h1>
-		<section id="container-menu" class="container">
+		<section class="container-flex">
+			<div id="pizza-header" class="tipo-menu" style="background-color: red;">Pizzas</div>
+			<div id="salad-header" class="tipo-menu">Pasta</div>
+			<div id="starter-header" class="tipo-menu">Starters</div>
+		</section>
+
+		<section id="container-menu-salad" class="container">
+			<div class="menu-item">
+				<h3 class="price">$13.50</h3>
+				<h2 class="menu-name">
+					Lasagna <span style="background-color: red; color: white; padding: 5px 5px 5px 5px; font-weight: lighter; border-radius: 10%;">Popular</span>
+				</h2>
+				<p class="menu-description">Special Sauce, Mozzarella, Parmesan, Ground Beef</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$14.50</h3>
+				<h2 class="menu-name">
+					Ravioli
+				</h2>
+				<p class="menu-description">Raviolli filled with Cheese</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$11.00</h3>
+				<h2 class="menu-name">
+					Spaghetti Classica
+				</h2>
+				<p class="menu-description">Fresh Tomatoes, Onions, Ground Beef</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$25.50</h3>
+				<h2 class="menu-name">
+					Seafood Pasta
+				</h2>
+				<p class="menu-description">Salmon, Shrimp, Lobster, Garlic</p>
+			</div>
+		</section>
+
+		<section id="container-menu-starter" class="container">
+			<div class="menu-item">
+				<h3 class="price">$5.50</h3>
+				<h2 class="menu-name">
+					Today's Soup <span style="background-color: lightgray; padding: 5px 5px 5px 5px; font-weight: lighter; border-radius: 10%;">Seasonal</span>
+				</h2>
+				<p class="menu-description">Ask the Waiter</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$8.50</h3>
+				<h2 class="menu-name">
+					Bruschetta
+				</h2>
+				<p class="menu-description">Bread with Pesto, Tomatoes, Onion, Garlic</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$9.50</h3>
+				<h2 class="menu-name">
+					Garlic Bread
+				</h2>
+				<p class="menu-description">Grilled Ciabatta, Garlic Butter, Onions</p>
+			</div>
+			<div class="menu-item">
+				<h3 class="price">$10.50</h3>
+				<h2 class="menu-name">
+					Tomozzarella
+				</h2>
+				<p class="menu-description">Tomatoe and Mozzarella</p>
+			</div>
+		</section>
+
+		<section id="container-menu-pizza" class="container";>
 			<div class="menu-item">
 				<h3 class="price">$12.50</h3>
 				<h2 class="menu-name">
@@ -248,6 +115,7 @@
 					Chicken
 				</h2>
 				<p class="menu-description">Fresh Tomatoes, Mozzarella, Chicken, Onions</p>
+			</div>
 			<div class="menu-item">
 				<h3 class="price">$16.50</h3>
 				<h2 class="menu-name">
@@ -258,18 +126,19 @@
 			<div class="menu-item">
 				<h3 class="price">$19.50</h3>
 				<h2 class="menu-name">
-					Meat Town
+					Meat Town <span style="background-color: red; padding: 5px 5px 5px 5px; color: white; font-weight: lighter; border-radius: 10%;">HOT!</span>
 				</h2>
 				<p class="menu-description">Fresh Tomatoes, Mozzarella, Hot Pepperoni, Hot Sausage, Beef, Chicken</p>
 			</div>
 			<div class="menu-item">
 				<h3 class="price">$17.00</h3>
 				<h2 class="menu-name">
-					Parma
+					Parma <span style="background-color: lightgray; padding: 5px 5px 5px 5px; font-weight: lighter; border-radius: 10%;">NEW</span>
 				</h2>
 				<p class="menu-description">Fresh Tomatoes, Mozzarella, Parma, Bacon, Fresh Arugula - $17.00</p>
 			</div>
 		</section>
+
 		<br>
 	</div>
 	<div style="background-color: #8b5f5b;">
@@ -279,14 +148,14 @@
 			<h1 id="About" class="cabecalho">About</h1>
 			<p class="corpo">The pizza restaurant was founded in lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.</p>
 			
-			<img class="chef-img" src="chef.jpg" alt="Mr. Italiano">
+			<img class="chef-img" src="imagens/chef.jpg" alt="Mr. Italiano">
 			
 			<p class="corpo">The chef? Mr. Italiano himself</p>
 			
 			<p class="corpo">We are proud of our interiors</p>
 			
 					
-			<img style="max-width:100%;" src="onepage_restaurant.jpg" alt="interior">
+			<img style="max-width:100%;" src="imagens/onepage_restaurant.jpg" alt="interior">
 				<p class="corpo" style="font-weight: bold;font-size: xx-large;">Opening Hours</p>
 				<ul class="horario">
 					<li>Mon & Tue closed</li>
@@ -303,7 +172,7 @@
 		</div>
 	</div>
 	<div id="frame 2">
-		<img class="mapa" src="map.jpg" alt="Localizacao do restaurante">
+		<img class="mapa" src="imagens/map.jpg" alt="Localizacao do restaurante">
 	</div>
 	
 	
@@ -311,7 +180,7 @@
 		<br>
 		<br>
 		<div id="contact-form">
-			<h1 class="cabecalho">Contact</h2>
+			<h1 id="Contact" class="cabecalho">Contact</h2>
 			<p class="contact">Find us at some address at some place or call us at 05050515-122330</p>
 			<p class="contact"> <span style="background-color: black; padding: 5px 5px 5px 5px;">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and will cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
 			<p class="contact" style="font-size: xx-large;"><span style="font-weight: bold;">Reserve</span> a table, ask for today's special or just send us a message:</p>
@@ -329,6 +198,8 @@
 	<br>
 	<br>
 	<br>
+	
+	<script src="menu.js"></script>
 	
     </body>
 </html>
