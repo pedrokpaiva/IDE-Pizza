@@ -1,3 +1,2 @@
 # IDE Pizza
- teste
-teste 2
+Site desenvolvido para o processo seletivo da IDE.
