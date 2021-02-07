@@ -3,6 +3,10 @@ body{
 	font-family: "Amatic SC";
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .link-header{
 	position: fixed;
 	z-index: 2;
@@ -90,8 +94,12 @@ body{
 	font-size: xx-large;
 	border: thin white solid;
 	border-bottom: transparent;
+	cursor: pointer;
 }
 
+.tipo-menu:hover{
+	background-color: red !important;
+}
 
 .menu-name{
 	color: black;
